@@ -16,7 +16,18 @@ def invCompliment(s):
     return new_s
 
 def DNAPalindroom(s):
-    if s == invCompliment(s):
+    if s.lower() == invCompliment(s):
         return True
     return False
+
+def langstePalindroom(s):
+    result = ''
+    for i in range(0,len(s)):
+        for j in range(i,len(s)):
+            if(DNAPalindroom(s[i:j])):
+                temp = invCompliment(s[i:j])
+            if len(temp) > len(result):
+                result = temp
+    print(result)
+
 
