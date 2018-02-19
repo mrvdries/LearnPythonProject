@@ -1,8 +1,8 @@
-def readString(s):
-    s = input(s+": ")
+def readString(a):
+    s = input(a+": ")
     return s
-def readDigit(s):
-    s = input(s+": ")
+def readDigit(a):
+    s = input(a+": ")
     try:
         f = int(s)
     except ValueError:
